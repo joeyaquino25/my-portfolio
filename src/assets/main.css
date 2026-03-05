@@ -13,7 +13,7 @@ body{
       rgba(26, 11, 51, 0.6), /* top */
       rgba(26, 11, 51, 0.8)  /* bottom */
     ),
-    url("./images/landing_bg.png");
+    url("/images/landing_bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
