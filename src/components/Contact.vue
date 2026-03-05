@@ -37,12 +37,14 @@
                         <button type="submit" class="contact-form-button">Submit</button>
 	                </div>
 
-	                <!-- recaptcha checkbox -->
+	                
+	                                                                               
+	            </form>
+				
+				<!-- recaptcha checkbox -->
                     <div class="d-flex justify-content-end mt-2">
                         <div ref="recaptchaContainer"></div>
                     </div>
-	                                                                               
-	            </form>
 
 	        </div>               
 	    </div>
@@ -183,6 +185,7 @@
 
 
 </script>
+
 
 
 
