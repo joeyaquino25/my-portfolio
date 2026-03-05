@@ -6,7 +6,6 @@
 	            <img src="/images/contact-map.png" class="img-fluid" id="contact-map-image">
 	        </div>
 
-	        <div class="col-10 order-1 order-md-2 col-md-5 my-1 " id="contact-form-area">
 
 	            <form  class="px-3 pt-3 mx-auto align-items-center" id="contact-form" @submit.prevent="submitForm">   
 
@@ -38,8 +37,7 @@
                     </div>
 	                                                                               
 	            </form>
-
-	        </div>               
+             
 	    </div>
 	</div>
 	
@@ -175,4 +173,5 @@
 	});
 
 </script>
+
 
