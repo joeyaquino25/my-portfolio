@@ -29,11 +29,6 @@
 	                </div>
 
 	                <div class="text-center form-footer">
-	                     <div class="social-icons">
-                            <a href="https://www.linkedin.com/in/charles-babbage-8291a6211/" id="linkedin"><i class="fab fa-linkedin"></i></a>
-                            <a href="https://gitlab.com/cbabbage0991" id="gitlab"><i class="fab fa-gitlab"></i></a>
-                            <a href="https://github.com/cbabbage0991" id="github"><i class="fab fa-github"></i></a>
-                        </div>
                         <button type="submit" class="contact-form-button">Submit</button>
 	                </div>
 
@@ -180,3 +175,4 @@
 	});
 
 </script>
+
