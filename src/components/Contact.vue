@@ -8,7 +8,7 @@
 
 	        <div class="col-10 order-1 order-md-2 col-md-5 my-1 " id="contact-form-area">
 
-	            <form  class="px-3 pt-3 mx-auto align-items-center" id="contact-form" @submit.prevent="submitForm">   
+	            <form @submit.prevent="submitForm"  class="px-3 pt-3 mx-auto align-items-center" id="contact-form" >   
 
 	                <h2>Contact Me</h2> 
 	                <p>Please let me know how I can help you.</p>
@@ -183,4 +183,5 @@
 
 
 </script>
+
 
