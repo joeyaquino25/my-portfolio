@@ -3,7 +3,7 @@
     <div class="contact-section">
         <div class="row align-items-center mt-4">
             <div class="col-md-6 map-container">
-                <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=centro%20escolar%20university%20manila&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                <iframe id="gmap_canvas" src="./images/myProjects/contact-map.png" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
             </div>
             <div class="col-md-6">
                 <form @submit.prevent="submitForm">
@@ -167,5 +167,8 @@
 	    clearInterval(interval);
 	  });
 	});
+
+	
+
 
 </script>

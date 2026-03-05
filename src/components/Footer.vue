@@ -1,11 +1,8 @@
 <template>
 	
-	<div class="container-fluid" id="footer">
-	    <div class="d-flex gap-3 justify-content-center py-3">
-	        <div>2025</div>
-	        <div>|</div>
-	        <div>All rights reserved.</div>
-	    </div>
-	</div>
-	
+	<footer class="mt-5 p-3 text-light">
+	    <h6 class="text-center">John Smith</h6>
+	    <p class="text-center mb-1">Full Stack Web Developer</p>
+	    <p class="text-center">&copy; All Rights Reserved 2026</p>
+	</footer>
 </template>

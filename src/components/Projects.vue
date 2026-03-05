@@ -1,45 +1,42 @@
 <template>
-    
-    <div class="container-fluid my-5" id="projects">
-        <div class="row text-center">
-            <h1 class="mt-5" id="project-title">My Projects</h1>
-            <div class="col-12 mt-4 mb-5">
-                <div class="row justify-content-center gap-4">
-                    <div class="col-12 col-md-5 col-lg-3 justify-content-center">
-                        <div class="card img-fluid mx-auto" id="proj-card">
-                          <img src="/images/card-eei.png" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                          </div>
-                        </div>
-                    </div>
+	<section class="pb-5" id="projects">
+	    <h1 class="mt-5 mb-5 pb-4 text-center">My Projects</h1>
+	    <div 
+	    	v-for="(group, index) in chunkedProjects"
+	    	:key="index"
+	    	class="card-deck my-5 justify-content-center"
+	    >
+	    	<ProjectCard 
+	    		v-for="project in group"
+	    		:key="project.id"
+	    		:project="project"
+	    	/>
+	    	
+	    </div>
 
-                    <div class="col-12 col-md-5 col-lg-3">
-                        <div class="card img-fluid mx-auto" id="proj-card">
-                          <img src="/images/card-ofc.png" class="card-img-top img-fluid" alt="...">
-                          <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                          </div>
-                        </div>
-                    </div>
+	    <!-- BREAK: Be back at 7:32 PM -->
+	 
 
-                    <div class="col-12 col-md-5 col-lg-3">
-                        <div class="card img-fluid mx-auto" id="proj-card">
-                          <img src="/images/card-pac.png" class="card-img-top img-fluid" alt="...">
-                          <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-               
-
-                    
-                    
-                </div>
-            </div>
-            
-        </div>
-    
-    
+	    <!-- End of 3rd Projects Placeholder-->
+	</section>
 </template>
+
+<script setup>
+	
+	import {computed} from "vue";
+	import ProjectCard from "./ProjectCard.vue";
+	import projects from "../data/projects.json";
+
+	const chunkSize = 3;
+
+	const chunkedProjects = computed(() => {
+
+		const chunks = [];
+
+		for(let i = 0; i < projects.length; i+=chunkSize){
+			chunks.push(projects.slice(i, i+chunkSize));
+		}
+
+		return chunks;
+	})
+</script>

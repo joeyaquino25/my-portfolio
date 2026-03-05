@@ -1,221 +1,141 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+#menu {
+
+  /* UI Properties */
+  background: #003E86 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+#hm, #prjcts, #tls, #cntct {
+  /* Layout Properties */
+  margin-left: 50px;
+  /* UI Properties */
+  text-align: center;
+  font: normal normal 500 20px Montserrat;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+}
+#landing {
+  /* UI Properties */
+  background: #CBDCF2 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.landing-text {
+  color: #003E86;
+  opacity: 1;
+}
+
+.card {
+  /* Layout Properties */
+
+  /* UI Properties */
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: -1px 3px 6px #00000029;
+  border-radius: 15px;
+  opacity: 1;
+}
+.card-title {
+  /* UI Properties */
+  text-align: left;
+  font: normal normal 600 20px Montserrat;
+  letter-spacing: 0px;
+  color: #003E86;
+}
+
+.card-text {
+  /* UI Properties */
+  text-align: left;
+  font: normal normal medium 14px Montserrat;
+  letter-spacing: 0px;
+  color: #003E86;
+}
+
+.card-img {
+  padding-top: 25px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 0px;
+  opacity: 1;
+}
+
+.tools-img {
+  padding: 15px;
+}
+
+.contact-section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 20px;
+}
+.contact-form-control {
+  background-color: transparent;
+  border: 1px solid #003C82;
+  color: #003C82;
+  padding: 12px;
+  font-size: 16px;
+}
+.contact-form-control::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+.submit-btn {
+  background-color: #3A86FF;
   color: white;
+  border-radius: 30px;
+  padding: 12px 30px;
+  border: none;
+  font-size: 16px;
+}
+.social-icons a {
+  font-size: 28px;
+  margin-right: 15px;
+  color: #0C2D57;
+}
+.map-container iframe {
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+  padding-right: 50px;
 }
 
-body{
-  font-family: Montserrat, "Noto Sans";
-  color: white;
-  background: 
-    radial-gradient(
-      rgba(26, 11, 51, 0.6), /* top */
-      rgba(26, 11, 51, 0.8)  /* bottom */
-    ),
-    url("/images/landing_bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+.form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-/*NAVBAR*/
-
-#navbar{
-  background-color: #370088;
+.form-footer .submit-btn {
+  margin-left: auto;
 }
 
-.navbar-brand{
-  color: white;
-  font-weight: bold;
-  font-size: 1.3rem;
-}
-
-.nav-link{
-    color: white;
-}
-
-
-/*LANDING SECTION*/
-
-#landing{
-  margin-top: 14vh;
-}
-
-#landing-img{
-  border: 1px solid white;
-}
-
-.my-name{
-  font-weight: 700;
+.fab {
   font-size: 2rem;
 }
 
-.my-title{
-  font-size: 1.3rem;
-  font-weight: 600;
+html {
+  scroll-behavior: smooth;
 }
 
-.aboutme{
-  line-height: 20px;
+body {
+  font-family: "Poppins",sans-serif; 
+  background: #F0F7FF 0% 0% no-repeat padding-box;
+  opacity: 1;
 }
 
-#landing-button{
-    background-color: #230854;
-    border: 2px solid white;
-    padding-left: 40px;
-    padding-right: 40px;
-    color: white; 
-    cursor: pointer;
-    font-size: 1.3rem;
-    transition: 0.2s;
-  }
-
-#landing-button:hover {
-    opacity: 0.8;
-    border: 0px;
-    background-color: white;
-    color: #370088;
-  }
-  
-#landing-button:active {
-    opacity: 0.4;
-    color: black;
-  }
-
-
-/*PROJECTS*/
-
-#projects{
-  background: 
-    linear-gradient(
-     rgba(250, 242, 242, 0.2),
-     rgba(250, 242, 242, 0.2)
-     );
+h1,h2,h3,h4, .nav-link,.card-title {
+  font-family: "Montserrat", serif;
+  color: #003E86;
+  opacity: 1;
 }
 
-#project-title{
-  font-weight: bold;
+h1 {
+  /* UI Properties */
+  font: normal normal 750 45px/30px Montserrat;
+  color: #003E86;
 }
 
-#proj-card{
-  border: 2px solid white;
-  color: #370088;
-}
 
-#card-title{
-  font-weight: bold;
-}
-
-/*TOOLS SECTION*/
-
-#tools{
-  background: 
-    linear-gradient(
-     rgba(250, 242, 242, 0.2),
-     rgba(250, 242, 242, 0.2)
-     );
-}
-
-#tools-title{
-  font-weight: bold;
-}
-
-#tools-image{
-  width: 200px;             /* or any size, or use responsive units */
-  aspect-ratio: 1 / 1;      /* ensures square shape */
-  overflow: hidden;         /* hides cropped parts */
-  border-radius: 10px; 
-  border: 1px solid white;
-}
-#tools img{
-  width: 100%;
-  object-fit: cover;        /* preserves aspect ratio, fills container (cropped) */
-  object-position: center;  /* adjust focal point */
-  display: block; 
-}     
-
-
-/*CONTACT SECTION*/
-
-#contact{
-  background: 
-    linear-gradient(
-     rgba(250, 242, 242, 0.2),
-     rgba(250, 242, 242, 0.2)
-     );
-}
-
-#contact-map-area{
-}    
-
-#contact-map-image{
-  overflow: hidden;         /* hides cropped parts */
-  aspect-ratio: 1 / 1;      /* ensures square shape */
-  object-fit: cover;        /* preserves aspect ratio, fills container (cropped) */
-  object-position: center;  /* adjust focal point */
-  display: block; 
-  border-radius: 10px; 
-  border: 1px solid white;
-}     
-
-#contact-form-area{
-}
-
-#contact-form{
-  border: 1px solid white;
-  border-radius: 10px;
-  background-color: #370088;
-  
-}
-
-#contact-textarea{
-  resize: vertical;
-  max-height: 80px;     
-  min-height: 40px;    
-}
-
-.contact-form-button{
-    background-color: #370088;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    border-radius: 5px;
-    border: 2px solid white !important;
-    color: white; 
-    cursor: pointer;
-    font-size: 1rem;
-    transition: 0.2s;
-  }
-
-.contact-form-button:hover {
-    opacity: 0.8;
-    border: 0px;
-    background-color: white;
-    color: #370088;
-  }
-  
-.contact-form-button:active {
-    opacity: 0.4;
-    color: black;
-  }
-
-#footer{
-  background-color: #370088;
-  color: white;
-}
-
-#backToTop {
-  position: fixed;
-  background-color: #B1A8B9;
-  border: 1px solid white;
-  bottom: 30px;
-  right: 30px;
-  width: 45px;
-  height: 45px;
-  display: none;         /* hidden by default */
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
+footer {
+  background: #003E86 0% 0% no-repeat padding-box;
+  opacity: 1;
 }

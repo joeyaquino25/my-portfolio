@@ -1,0 +1,22 @@
+[
+    {  
+        "id": 1,
+        "title": "EEI Corporation",
+        "description": "Some quick example text to build on the card title and make up the bulk of the card’s content.",
+        "image": "/images/myProjects/card-eei.png"
+    },
+    {
+        "id": 2,
+        "title": "One Fighting Championship",
+        "description": "Some quick example text to build on the card title and make up the bulk of the card’s content.",
+        "image": "/images/myProjects/card-ofc.png"
+    },
+    {
+        "id": 3,
+        "title": "PAC Antlantic Global",
+        "description": "Some quick example text to build on the card title and make up the bulk of the card’s content.",
+        "image": "/images/myProjects/card-pac.png"
+    }
+ 
+
+]
