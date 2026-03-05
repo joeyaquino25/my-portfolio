@@ -1,42 +1,53 @@
 <template>
-    <h1 class="text-center my-4 pt-5" id="contact">Contact</h1>
-    <div class="contact-section">
-        <div class="row align-items-center mt-4">
-            <div class="col-md-6 map-container">
-                <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=centro%20escolar%20university%20manila&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-            </div>
-            <div class="col-md-6">
-                <form @submit.prevent="submitForm">
-                    <div class="mb-3">
-                        <input type="text" class="form-control contact-form-control" placeholder="First Name M.I. Last Name" v-model="name">
-                    </div>
-                    <div class="mb-3">
-                        <input type="email" class="form-control contact-form-control" placeholder="Email" v-model="email">
-                    </div>
-                    <div class="mb-3">
-                        <textarea class="form-control contact-form-control" rows="6" placeholder="Message" v-model="message"></textarea>
-                    </div>
-                    <div class="form-footer">
-                        <div class="social-icons">
+	
+	<div class="container my-5" id="contact">
+	    <div class="row justify-content-center gap-2 mt-5 mb-5">
+	        <div class="col-10 order-2 order-md-1 col-md-5 my-1" id="contact-map-area">
+	            <img src="/images/contact-map.png" class="img-fluid" id="contact-map-image">
+	        </div>
+
+	        <div class="col-10 order-1 order-md-2 col-md-5 my-1 " id="contact-form-area">
+
+	            <form  class="px-3 pt-3 mx-auto align-items-center" id="contact-form" @submit.prevent="submitForm">   
+
+	                <h2>Contact Me</h2> 
+	                <p>Please let me know how I can help you.</p>
+	             
+	                <div>
+	                  <label for="exampleFormControlInput1" class="form-label">Name</label>
+	                  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Your name">
+	                </div>
+
+	                <div class="pt-1">
+	                  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+	                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="your.email@gmail.com">
+	                </div>
+
+	                <div class="pt-1 mb-2">
+	                  <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+	                  <textarea class="form-control" id="contact-textarea" rows="3"></textarea>
+	                </div>
+
+	                <div class="text-center form-footer">
+	                     <div class="social-icons">
                             <a href="https://www.linkedin.com/in/charles-babbage-8291a6211/" id="linkedin"><i class="fab fa-linkedin"></i></a>
                             <a href="https://gitlab.com/cbabbage0991" id="gitlab"><i class="fab fa-gitlab"></i></a>
                             <a href="https://github.com/cbabbage0991" id="github"><i class="fab fa-github"></i></a>
                         </div>
-                        <button type="submit" class="submit-btn pl-5 pr-5">Submit</button>
-                    </div>
+                        <button type="submit" class="contact-form-button">Submit</button>
+	                </div>
 
-
-                    <!-- recaptcha checkbox -->
+	                <!-- recaptcha checkbox -->
                     <div class="d-flex justify-content-end mt-2">
                         <div ref="recaptchaContainer"></div>
                     </div>
+	                                                                               
+	            </form>
 
-                    
-                </form>
-                
-            </div>
-        </div>
-    </div>
+	        </div>               
+	    </div>
+	</div>
+	
 </template>
 
 <script setup>
@@ -152,6 +163,10 @@
 
 
 	onMounted(() => {
+	  // This code waits for the Google reCAPTCHA library to load, then renders the reCAPTCHA widget using onMounted hook. 
+	  // The widget is rendered with grecaptcha.render(), which requires a sitekey. 
+	  // Callback functions handle success and expiration events. 
+	  // reCAPTCHA is reset upon form submission to clear the token.
 	  const interval = setInterval(() => {
 	    if (window.grecaptcha && window.grecaptcha.render) {
 	      renderRecaptcha();
@@ -163,8 +178,5 @@
 	    clearInterval(interval);
 	  });
 	});
-
-	
-
 
 </script>
