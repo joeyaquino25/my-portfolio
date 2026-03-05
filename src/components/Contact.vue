@@ -1,12 +1,12 @@
 <template>
 	
 	<div class="container my-5" id="contact">
-	    <div class="row justify-content-center gap-2 mt-5 mb-5">
+	
 	        <div class="col-10 order-2 order-md-1 col-md-5 my-1" id="contact-map-area">
 	            <img src="/images/contact-map.png" class="img-fluid" id="contact-map-image">
 	        </div>
 
-
+			<div class="row justify-content-center gap-2 mt-5 mb-5">
 	            <form  class="px-3 pt-3 mx-auto align-items-center" id="contact-form" @submit.prevent="submitForm">   
 
 	                <h2>Contact Me</h2> 
@@ -37,8 +37,8 @@
                     </div>
 	                                                                               
 	            </form>
-             
-	    </div>
+         </div>    
+	    
 	</div>
 	
 </template>
@@ -173,5 +173,6 @@
 	});
 
 </script>
+
 
 
