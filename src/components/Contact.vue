@@ -120,7 +120,7 @@
 	
 
 
-	const SITE_KEY = '6LdglX8sAAAAALxCNjtyQ6DQkGHIELNGYUcf5Ktq';  
+	const SITE_KEY = '6Le6JYAsAAAAACRXBd9a8Lo9dOOoMqUeRH9n7eKO';  
 
 	const recaptchaContainer = ref(null);
 	const recaptchaWidgetId = ref(null);
@@ -183,5 +183,6 @@
 
 
 </script>
+
 
 
